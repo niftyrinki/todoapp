@@ -86,53 +86,52 @@
 		
 		var add = document.getElementById("add");
 		var addedTask = document.getElementById("addedTask");
-
-
+		var taskText = document.getElementById("taskText");
+		var date = document.getElementById("date");
 
 		addtask.addEventListener("click", function() {
 			writeTask.style.display = "block";
 		}, false);
 
 		add.addEventListener("click", function() {
-			var taskText = document.getElementById("taskText");
-			var date = document.getElementById("date");
-			if(taskText.value) {
-				var tr = document.createElement('tr');
-				
-				var td = document.createElement('td');
-				td.className = "checkbox";
 
-				var img = document.createElement('img');
-				img.src = 'images/check.png';
-				img.addEventListener("click", function() {
-					this.src = "images/checked.png";
-					window.setTimeout(function() {
-						tr.remove();
-					}, 200);
-				}, false );
-				td.appendChild(img);
+			if(!taskText.value.trim()) return;
 
-				tr.appendChild(td);
+			var tr = document.createElement('tr');
+			
+			var td = document.createElement('td');
+			td.className = "checkbox";
 
-				td = document.createElement('td');
-				td.className = "added-task";
-				td.innerHTML = taskText.value;
-				tr.appendChild(td);
+			var img = document.createElement('img');
+			img.src = 'images/check.png';
+			img.addEventListener("click", function() {
+				this.src = "images/checked.png";
+				window.setTimeout(function() {
+					tr.remove();
+				}, 200);
+			}, false );
+			td.appendChild(img);
 
-				td = document.createElement('td');
-				td.className = "edit";
+			tr.appendChild(td);
 
-				var a = document.createElement('a');
-				a.href = "#";
-				a.innerHTML = '---';
-				td.appendChild(a);
+			td = document.createElement('td');
+			td.className = "added-task";
+			td.innerHTML = taskText.value;
+			tr.appendChild(td);
 
-				tr.appendChild(td);
+			td = document.createElement('td');
+			td.className = "edit";
 
-				addedTask.appendChild(tr);
+			var a = document.createElement('a');
+			a.href = "#";
+			a.innerHTML = '---';
+			td.appendChild(a);
 
-				taskText.value = " ";
-			}
+			tr.appendChild(td);
+
+			addedTask.appendChild(tr);
+
+			taskText.value = " ";
 			
 		}, false);
 	}
