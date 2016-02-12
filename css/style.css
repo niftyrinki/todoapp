@@ -1,12 +1,15 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body {
 	box-sizing: border-box;
 	margin: 0;
 }
-
+a {
+	text-decoration: none;
+}
 .header {
 	background-color: black;
 	height: 70px;
@@ -73,7 +76,7 @@ body {
 	float: left;
 }
 .container {
-	padding: 0 200px;
+	padding: 0 175px;
 	width: 100%;
 	background-color: #fafafa;
 	height: 100%;
@@ -83,6 +86,7 @@ body {
 	width: 30%;
 	height: 100%;
 	float: left;
+	padding: 10px;
 }
 
 
@@ -91,4 +95,152 @@ body {
 	width: 70%;
 	height: 100%;
 	float: right;
+}
+.inbox-menu {
+	width: 100%;
+}
+
+.inbox-menu ul {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+}
+.inbox-menu li {
+	padding: 15px 20px;
+	color: black;
+
+}
+
+.inbox-menu a {
+	text-decoration: none;
+	color: black;
+
+}
+.inbox-page{
+	 height: 100%;
+	 width: 100%;
+	 padding: 30px;
+
+}
+
+.inbox-title{
+	width: 100%;
+	padding: 10px;
+	height: 50px;
+}
+
+.inbox-title h1 {
+	font-size: 20px;
+	font-weight: 300;
+	width: 50%;
+	float: left;
+	margin: 0;
+}
+.inbox-title button {
+	background-color: white;
+	border: 0;
+	font-size: 20px;
+	height: 100%;
+	float: right;
+}
+.tasks {
+	display: block;
+}
+.write-task {
+	display: none;
+}
+.tasks,
+.write-task,
+.writebox,
+.buttonbox {
+	width: 100%;
+	margin: 5px;
+}
+.tasks table {
+	width:100%;
+}
+.tasks table tr {
+	width: 100%;
+}
+.tasks table td {
+
+}
+.checkbox {
+	height: 25px;
+	width: 25px;
+	
+	border: none;
+	text-align: right;
+}
+.checkbox img {
+	height: 100%;
+	
+	border: none;
+}
+.edit {
+	height: 25px;
+	width: 10px;
+	border: none;
+	
+	text-align: right;
+}
+
+
+.added-task {
+	height: 20px;
+	width: 85%;
+	border: none;
+	padding: 10px 20px;
+	border-bottom: 1px solid #d3d3d3;
+}
+.writebox {
+	border: 1px solid #d3d3d3;
+	margin: 10px 0;
+	height: 40px;
+
+}
+.task-text {
+	width: 80%;
+	border: none;
+	height: 100%;
+	padding: 5px 10px;
+	float: left;
+	border-right: 1px solid #d3d3d3;
+}
+.schedule {
+	width: 20%;
+	border: none;
+	height: 100%;
+	padding: 5px 10px;
+	float:right;
+
+}
+.buttonbox button {
+	padding: 5px 10px;
+	background-color: black;
+	color: white;
+	border-radius: 4px;
+	border: 1px solid black;
+	margin: 0px 20px 10px 0;
+
+}
+.addtask {
+	margin: 10px 0;
+}
+.addtask a {
+	text-decoration: none;
+	color: black;
+	margin: 0 10px;
+}
+.addtask span {
+	font-size: 14px;
+}
+.addtask a:hover,
+cancel:hover,
+.inbox-title h1:hover {
+	text-decoration: underline;
+}
+.search:hover {
+	background-color: white;
+		opacity: .5;
 }
