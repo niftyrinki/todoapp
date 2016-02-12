@@ -29,10 +29,89 @@
 			<div class="left-sidebar">
 				<div class="inbox-menu">
 					<ul>
-						<li><a href="#" >Inbox</a></li>
-						<li><a href="#" >Today</a></li>
-						<li><a href="#" >Next 7 day</a></li>
+						<li><a href="#" ><i class="fa fa-inbox"></i>Inbox</a></li>
+						<li><a href="#" ><i class="fa fa-calendar-o"></i>Today</a></li>
+						<li><a href="#" ><i class="fa fa-calendar-plus-o"></i>Next 7 day</a></li>
 					</ul>
+				</div>
+				<div class="bottom-block">
+					<div class="inline-option">
+						<ul>
+							<li>Projects</li>
+							<li>Labels</li>
+							<li>Filters</li>
+						</ul>
+					</div>
+					<div class="block-option">
+						<ul>
+							<li>
+								<table>
+									<tr>
+										<td>
+											<div class="red"></div>
+										</td>
+										<td class="mid">
+											Personal
+										</td>
+										<td>**</td>
+									</tr>
+								</table>
+							 </li>
+							<li><table>
+									<tr>
+										<td>
+											<div class="grey"></div>
+										</td>
+										<td class="mid">
+											Shopping
+										</td>
+										<td>**</td>
+									</tr>
+								</table>
+							</li>
+							<li><table>
+									<tr>
+										<td >
+											<div class="blue"></div>
+										</td>
+										<td class="mid">
+											work
+										</td>
+										<td>**</td>
+									</tr>
+								</table>
+							</li>
+							<li><table>
+									<tr>
+										<td>
+											<div class="green"></div>
+										</td>
+										<td class="mid">
+											Errands
+										</td>
+										<td>**</td>
+									</tr>
+								</table>
+							</li>
+							<li><table>
+									<tr>
+										<td>
+											<div class="purple"></div>
+										</td>
+										<td class="mid">
+											Movies To Watch
+										</td>
+										<td>**</td>
+									</tr>
+								</table>
+							</li>
+							
+						</ul>
+					</diV>
+					<div class="addProject">
+						<span><i class="fa fa-plus"></i>
+						<a href="#">Add Project</a></span>
+					</div>
 				</div>
 
 				
@@ -98,7 +177,13 @@
 			if(!taskText.value.trim()) return;
 
 			var tr = document.createElement('tr');
-			
+			tr.addEventListener("mouseenter", function() {
+				tr.className = "hover";
+			}, false);
+			tr.addEventListener("mouseleave", function() {
+				tr.className = "";
+			}, false);
+
 			var td = document.createElement('td');
 			td.className = "checkbox";
 
@@ -131,7 +216,7 @@
 
 			addedTask.appendChild(tr);
 
-			taskText.value = " ";
+			taskText.value = "";
 			
 		}, false);
 	}

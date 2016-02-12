@@ -7,6 +7,10 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 }
+ul {
+	padding: 0;
+	list-style: none;
+}
 a {
 	text-decoration: none;
 }
@@ -36,7 +40,7 @@ a {
 
 .search {
 	display: inline-block;
-	padding: 20px 0;
+	margin: 20px 0;
 }
 
 
@@ -106,9 +110,17 @@ a {
 	padding: 0;
 }
 .inbox-menu li {
-	padding: 15px 20px;
+	padding: 10px 10px;
 	color: black;
+	font-size: 14px;
 
+}
+.inbox-menu li i {
+	margin-right: 10px;
+	font-size: 22px;
+}
+.inbox-menu li:hover {
+	background-color: white;
 }
 
 .inbox-menu a {
@@ -116,6 +128,73 @@ a {
 	color: black;
 
 }
+.bottom-block,
+.inline-option,
+.block-option,
+.block-option table {
+	width: 100%;
+}
+
+.inline-option li {
+	display: inline-block;
+	padding:10px 20px 0 20px;
+	font-size: 12px;
+	color: #a8a8a8;
+}
+.inline-option ul {
+	margin: 0;
+}
+
+.inline-option {
+	border-bottom: 1px solid #d3d3d3;
+}
+.block-option li:hover {
+	background-color: white;
+}
+
+.block-option li td{
+	padding: 5px;
+	font-size: 14px;
+}
+.mid {
+	width: 90%;
+}
+
+
+
+
+.red,
+.grey,
+.blue,
+.green,
+.purple {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.red {
+	background-color: #fb886e;
+}
+.grey {
+	background-color: #cccccc;
+}
+.blue {
+	background-color:  #a8c8e4;
+}
+.green {
+	background-color: #74e8d3;
+}
+.purple {
+	background-color: #e2a8e4;
+}
+
+
+
+
+
+
+
+
 .inbox-page{
 	 height: 100%;
 	 width: 100%;
@@ -167,7 +246,7 @@ a {
 }
 .checkbox {
 	height: 25px;
-	width: 25px;
+	width: 5%;
 	
 	border: none;
 	text-align: right;
@@ -177,18 +256,24 @@ a {
 	
 	border: none;
 }
+
 .edit {
 	height: 25px;
-	width: 10px;
+	width: 5%;
 	border: none;
-	
+	visibility: hidden;
 	text-align: right;
 }
+
+tr.hover .edit {
+	visibility: visible;
+}
+
 
 
 .added-task {
 	height: 20px;
-	width: 85%;
+	width: 90%;
 	border: none;
 	padding: 10px 20px;
 	border-bottom: 1px solid #d3d3d3;
@@ -215,6 +300,9 @@ a {
 	float:right;
 
 }
+.inbox-title button {
+	color: #a8a8a8;
+}
 .buttonbox button {
 	padding: 5px 10px;
 	background-color: black;
@@ -224,23 +312,27 @@ a {
 	margin: 0px 20px 10px 0;
 
 }
-.addtask {
+.addtask,
+.addProject {
 	margin: 10px 0;
 }
-.addtask a {
+.addtask a,
+.addProject a {
 	text-decoration: none;
 	color: black;
 	margin: 0 10px;
 }
-.addtask span {
+.addtask span ,
+.addProject span{
 	font-size: 14px;
 }
 .addtask a:hover,
+.addProject a:hover,
 cancel:hover,
 .inbox-title h1:hover {
 	text-decoration: underline;
 }
 .search:hover {
-	background-color: white;
+	
 		opacity: .5;
 }
